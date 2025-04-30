@@ -10,19 +10,16 @@ function addItem(cart, item, quantity) {
 
   let allowed = "abcdefghijklmnopqrstuvwxyz ";
   if (quantity < 0) {
-    console.log('false:quan');
     return false;
   }
 
   for (let char of item) {
     if (!allowed.includes(char)) {
-      console.log('false:name');
       return false;
     }
   }
 
   cart[item] = quantity;
-  console.log('true');
   return true;
 }
 
